@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<h2 class="display-5">Aggregiate Function</h2>
+<table class="table table-bordered table-striped table-hover table-sm mt-3">
+    <thead class="table table-info">
+        <tr>
+            <th>Count</th>
+            <th>Min Invoice Total</th>
+            <th>Max Invoice Total</th>
+            <th>Avg Invoice Total</th>
+            <th>Sum of Invoice total</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>@ViewBag.NumberOfVendors</td>
+            <td>@ViewBag.InvoiceMin</td>
+            <td>@ViewBag.InvoiceMax</td>
+            <td>@ViewBag.InvoiceAvg</td>
+            <td>@ViewBag.InvoiceSum</td>
+        </tr>
+    </tbody>
+</table>

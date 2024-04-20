@@ -1,0 +1,29 @@
+﻿@model IEnumerable<Laptop_Technology.Models.LaptopModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2 class="display-4">Laptop Model</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table table-bordered table-striped table-hover table-sm">
+    <thead>
+        <tr>
+            <th> @Html.DisplayNameFor(model => model.ModelName)</th>
+        </tr>
+    </thead>
+   
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td> @Html.DisplayFor(modelItem => item.ModelName)</td>
+                <td>@Html.ActionLink("Delete", "Delete", new { id = item.LaptopModelId }, new { @class = "btn btn-danger btn-sm" })</td>
+            </tr>
+        }
+    </tbody>
+
+</table>

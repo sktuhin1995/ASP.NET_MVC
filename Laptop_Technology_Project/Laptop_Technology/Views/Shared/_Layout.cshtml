@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/font-awesome.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <title>@ViewBag.Title - Laptop Technology</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    @RenderSection("styles", required: false)
+
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success" style="font-weight:bold">
+        <div class="container-fluid">
+            @Html.ActionLink("Laptop Technology", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Toggle navigation" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
+                <ul class="navbar-nav flex-grow-1">
+                    <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("Brand", "Index", "Brands", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("LaptopModel", "Index", "LaptopModels", new { area = "" }, new { @class = "nav-link" })</li>
+                    <li>@Html.ActionLink("Laptop", "Index", "Laptops", new { area = "" }, new { @class = "nav-link" })</li>
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        @RenderBody()
+    </div>
+    <footer class="container-fluid">
+        <p class="text-center">&copy; @DateTime.Now.Year - www.laptoptec.com</p>
+    </footer>
+    @RenderSection("scripts", required: false)
+    <script src="~/Scripts/bootstrap.js"></script>
+
+</body>
+</html>
